@@ -21,4 +21,8 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def to_dict(self):
+        dict_ionary = self.__dict__.copy()
+        dict_ionary["__class__"] = type(self).__name__
+        dict_ionary["created_at"] = dict_ionary["created_at"].isoformat()
+        dict_ionary["updated_at"] = dict_ionary["updated_at"].isoformat()
         
