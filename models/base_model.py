@@ -26,15 +26,3 @@ class BaseModel:
         dict_ionary["created_at"] = dict_ionary["created_at"].isoformat()
         dict_ionary["updated_at"] = dict_ionary["updated_at"].isoformat()
         return dict_ionary
-
-
-my_base = BaseModel()
-print(my_base)
-
-my_base.save()
-print("\n")
-print(my_base)
-
-my_base = my_base.to_dict()
-print("\n")
-print(my_base)
