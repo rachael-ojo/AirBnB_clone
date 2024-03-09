@@ -2,8 +2,8 @@
 
 from datetime import datetime
 import uuid
-from engine.file_storage import FileStorage
-storage = FileStorage("file.json")
+
+
 
 class BaseModel:
 
@@ -41,7 +41,3 @@ class BaseModel:
         return dict_ionary
     
 
-obj1 = BaseModel()
-obj2 = BaseModel()
-
-print(obj1)
