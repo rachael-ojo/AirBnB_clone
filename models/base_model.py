@@ -2,6 +2,8 @@
 
 from datetime import datetime
 import uuid
+from engine.file_storage import FileStorage
+storage = FileStorage("file.json")
 
 class BaseModel:
 
@@ -37,3 +39,9 @@ class BaseModel:
         dict_ionary["created_at"] = dict_ionary["created_at"].isoformat()
         dict_ionary["updated_at"] = dict_ionary["updated_at"].isoformat()
         return dict_ionary
+    
+
+obj1 = BaseModel()
+obj2 = BaseModel()
+
+print(obj1)
