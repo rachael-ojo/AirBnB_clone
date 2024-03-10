@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
+"""Defines the FileStorage class."""
 import json
-import datetime
-
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
@@ -13,6 +11,7 @@ from models.user import User
 
 
 class FileStorage:
+    """Represent an abstracted storage engine."""
 
     def __init__(self, file_path):
         """Initializes a new instance of MyClass."""
@@ -35,7 +34,6 @@ class FileStorage:
         with open(self.__file_path, 'w') as file:
             json.dump(obj_dict, file)
 
-
     def classes(self):
         """  """
         classes = {"Amenity": Amenity,
@@ -47,8 +45,6 @@ class FileStorage:
                    "User": User}
         return classes
     
-
-
     def reload(self):
         """  """
         try:
@@ -66,9 +62,6 @@ class FileStorage:
 
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
-
-
-
 
         def attributes(self):
             """Returns the valid attributes and their types for classname"""
@@ -107,4 +100,3 @@ class FileStorage:
                             "text": str}
             }
             return attributes
-

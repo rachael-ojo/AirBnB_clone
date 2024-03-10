@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""  """
-
+"""Defines a Place class."""
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
-    """  """
+    """Represents a place."""
 
     price_by_night = 0
     latitude = 0.0
