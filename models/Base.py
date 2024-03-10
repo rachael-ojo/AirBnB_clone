@@ -1,5 +1,6 @@
+#!/usr/bin/python3
+from datetime import Datetime
 import uuid
-import datetime
 
 class Base:
     """A class representing a note entity."""

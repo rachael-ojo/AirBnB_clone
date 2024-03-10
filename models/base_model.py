@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
+"""Defines the BaseModel class."""
+import models
 from datetime import datetime
 import uuid
 
-
-
 class BaseModel:
-
+    """Represents the BaseModel of the HBnB project."""
     def __init__(self, *args, **kwargs):
         """Initializes a new instance of the BaseModel class."""
         if kwargs:
@@ -24,8 +23,7 @@ class BaseModel:
     
     def __str__(self):
         """Returns a string representation of the BaseModel instance."""
-        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
-
+        return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
 
     
     def save(self):
