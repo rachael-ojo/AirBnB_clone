@@ -19,7 +19,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(True)
 
         with self.assertRaises(NotImplementedError):
-        base_model.save()
+            base_model.save()
 
     def test_delete(self):
         """Test the deletion functionality of the BaseModel class."""
