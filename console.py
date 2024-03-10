@@ -2,10 +2,12 @@
 
 import cmd
 import json
+from models import storage
+from models.base_model import BaseModel
 
 
 
-class HHBNBCommand(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
 
     """Simple Command Processor example."""
 
