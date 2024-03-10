@@ -6,7 +6,7 @@ import json
 class FileStorage:
 
     def __init__(self, file_path):
-         """Initializes a new instance of MyClass."""
+        """Initializes a new instance of MyClass."""
         self.__file_path = "file.json"
         self.__objects = {}
 

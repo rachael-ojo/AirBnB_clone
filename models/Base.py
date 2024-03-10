@@ -1,19 +1,23 @@
 #!/usr/bin/python3
 from datetime import Datetime
 import uuid
+<<<<<<< HEAD
 
+=======
+import datetime
+from models.engine.FileStorage import FileStorage
+fileStorage = FileStorage()
+>>>>>>> fc3446b10f8326920553a111899f12c057dcfcd1
 class Base:
     """A class representing a note entity."""
-    def __init__(self, allowedKeys, **kwargs):
+    def __init__(self, **kwargs):
         """Initializes a new instance of MyClass."""
+        self.__dict__ = kwargs
         self.id = uuid.uuid4().hex
         self.created_at = datetime.datetime.now()
         self.updated_at = datetime.datetime.now()
+        fileStorage.create(self)
 
-        print("the kwargs is", kwargs)
-        for key in kwargs:
-            if key in allowedKeys:
-                self.__dict__[key] = kwargs[key]
 
     def __str__(self):
         """Returns a string representation of the object."""
